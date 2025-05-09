@@ -4,7 +4,9 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import morgan from 'morgan';
 import winston from 'winston';
+import logger from './utils/logger.js';
 
+// Add this after your other middleware
 // Import routes
 import authRoutes from './routes/auth.routes.js';
 import hostelRoutes from './routes/hostel.routes.js';
@@ -34,6 +36,7 @@ if (process.env.NODE_ENV !== 'production') {
     format: winston.format.simple()
   }));
 }
+app.use(morgan('combined', { stream: logger.stream }));
 
 // Middleware
 app.use(cors());

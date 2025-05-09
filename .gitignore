@@ -1,13 +1,70 @@
-*node_modules
-*dist
-*build
-*coverage
-*logs
-*temp
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
 
+# Environment files
 .env
 .env.local
-.env.development
-.env.production
-.env.test
+.env.development.local
 .env.test.local
+.env.production.local
+
+# Build outputs
+/build
+/dist
+/out
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Testing
+/coverage
+
+# Production
+/build
+
+# Misc
+*.pem
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts

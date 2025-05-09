@@ -1,117 +1,111 @@
-# HostelHub - Hostel Booking Platform
+# BookMyHostel
 
-A full-featured hostel booking platform similar to OYO Rooms, built with React, Node.js, and MongoDB.
-
-## Features
-
-### User Features
-- Browse and search hostels
-- View detailed hostel information
-- Book rooms
-- Manage bookings
-- Leave reviews and ratings
-- User profile management
-
-### Admin Features
-- Hostel management (CRUD operations)
-- Booking management
-- User management
-- Analytics dashboard
-- Review moderation
-
-## Tech Stack
-
-### Frontend
-- React.js
-- Tailwind CSS
-- React Router
-- Redux Toolkit
-- Axios
-- React Query
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB
-- JWT Authentication
-- Mongoose ODM
+A hostel booking platform built with the MERN stack.
 
 ## Project Structure
 
 ```
-hostel-hub/
-├── client/                 # Frontend React application
-│   ├── public/
-│   └── src/
-│       ├── components/     # Reusable components
-│       ├── pages/         # Page components
-│       ├── features/      # Feature-specific components
-│       ├── hooks/         # Custom hooks
-│       ├── services/      # API services
-│       ├── store/         # Redux store
-│       ├── utils/         # Utility functions
-│       └── assets/        # Static assets
-│
-└── server/                # Backend Node.js application
-    ├── src/
-    │   ├── config/       # Configuration files
-    │   ├── controllers/  # Route controllers
-    │   ├── middleware/   # Custom middleware
-    │   ├── models/       # Database models
-    │   ├── routes/       # API routes
-    │   ├── services/     # Business logic
-    │   └── utils/        # Utility functions
-    └── tests/            # Test files
+bookmyhostel/
+├── client/             # React frontend
+├── server/             # Node.js backend
+├── .env               # Environment variables (create from .env.example)
+├── .gitignore         # Git ignore rules
+└── README.md          # This file
 ```
 
-## Getting Started
+## Prerequisites
 
-### Prerequisites
 - Node.js (v14 or higher)
-- MongoDB
+- MongoDB (v4.4 or higher)
 - npm or yarn
 
-### Installation
+## Setup Instructions
 
-1. Clone the repository
-```bash
-git clone https://github.com/yourusername/hostel-hub.git
-cd hostel-hub
-```
+### Backend Setup
 
-2. Install frontend dependencies
-```bash
-cd client
-npm install
-```
+1. Navigate to the server directory:
+   ```bash
+   cd server
+   ```
 
-3. Install backend dependencies
-```bash
-cd ../server
-npm install
-```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-4. Set up environment variables
-- Create `.env` files in both client and server directories
-- Add necessary environment variables (see .env.example files)
+3. Create a `.env` file in the server directory with the following variables:
+   ```
+   PORT=5000
+   NODE_ENV=development
+   MONGODB_URI=mongodb://localhost:27017/bookmyhostel
+   JWT_SECRET=your_jwt_secret_key_here
+   JWT_EXPIRE=30d
+   ```
 
-5. Start the development servers
-```bash
-# Start backend server (from server directory)
-npm run dev
+4. Initialize the database with admin user:
+   ```bash
+   npm run init-db
+   ```
 
-# Start frontend server (from client directory)
-npm start
-```
+5. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+### Frontend Setup
+
+1. Navigate to the client directory:
+   ```bash
+   cd client
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file in the client directory:
+   ```
+   VITE_API_URL=http://localhost:5000/api
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Default Admin Credentials
+
+- Email: admin@bookmyhostel.com
+- Password: admin123
+
+## Features
+
+- User authentication (register, login, logout)
+- Hostel management (CRUD operations)
+- Booking management
+- User profile management
+- Admin dashboard
+- Responsive design
 
 ## API Documentation
 
-API documentation is available at `/api-docs` when running the server.
+The API documentation is available at `http://localhost:5000/api-docs` when running the server.
+
+## Logging
+
+Logs are stored in the `server/logs` directory:
+- `error.log`: Contains error logs
+- `combined.log`: Contains all logs
 
 ## Contributing
 
-Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License. 
