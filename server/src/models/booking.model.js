@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const bookingSchema = new mongoose.Schema({
   user: {
@@ -97,4 +97,4 @@ bookingSchema.methods.canBeCancelled = function() {
 
 const Booking = mongoose.model('Booking', bookingSchema);
 
-module.exports = Booking; 
+export default Booking; 

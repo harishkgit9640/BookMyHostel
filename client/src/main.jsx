@@ -7,7 +7,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './index.css';
 import App from './App';
-import { store } from './store';
+import store from './store';
 
 const queryClient = new QueryClient({
   defaultOptions: {

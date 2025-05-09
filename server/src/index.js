@@ -1,15 +1,17 @@
-require('dotenv').config();
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const morgan = require('morgan');
-const winston = require('winston');
+import dotenv from 'dotenv';
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import morgan from 'morgan';
+import winston from 'winston';
 
 // Import routes
-const authRoutes = require('./routes/auth.routes');
-const hostelRoutes = require('./routes/hostel.routes');
-const bookingRoutes = require('./routes/booking.routes');
-const userRoutes = require('./routes/user.routes');
+import authRoutes from './routes/auth.routes.js';
+import hostelRoutes from './routes/hostel.routes.js';
+import bookingRoutes from './routes/booking.routes.js';
+import userRoutes from './routes/user.routes.js';
+
+dotenv.config();
 
 // Create Express app
 const app = express();
@@ -17,7 +19,10 @@ const app = express();
 // Configure logger
 const logger = winston.createLogger({
   level: 'info',
-  format: winston.format.json(),
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.json()
+  ),
   transports: [
     new winston.transports.File({ filename: 'error.log', level: 'error' }),
     new winston.transports.File({ filename: 'combined.log' })
@@ -47,25 +52,23 @@ app.use((err, req, res, next) => {
   logger.error(err.stack);
   res.status(500).json({
     success: false,
-    message: 'Internal Server Error',
+    message: 'Something went wrong!',
     error: process.env.NODE_ENV === 'development' ? err.message : undefined
   });
 });
 
-// Database connection
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => {
-  logger.info('Connected to MongoDB');
-})
-.catch((err) => {
-  logger.error('MongoDB connection error:', err);
-});
+// Connect to MongoDB
+const MONGODB_URI = 'mongodb://localhost:27017/bookmyhostel';
 
-// Start server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  logger.info(`Server is running on port ${PORT}`);
-}); 
+mongoose.connect(MONGODB_URI)
+  .then(() => {
+    logger.info('Connected to MongoDB');
+    const port = process.env.PORT || 5000;
+    app.listen(port, () => {
+      logger.info(`Server is running on port ${port}`);
+    });
+  })
+  .catch((error) => {
+    logger.error('MongoDB connection error:', error);
+    process.exit(1);
+  }); 

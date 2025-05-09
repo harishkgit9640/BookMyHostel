@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const roomSchema = new mongoose.Schema({
   type: {
@@ -149,4 +149,4 @@ hostelSchema.index({
 
 const Hostel = mongoose.model('Hostel', hostelSchema);
 
-module.exports = Hostel; 
+export default Hostel; 

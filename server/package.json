@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "Backend server for HostelHub booking platform",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "test": "jest"
+    "test": "jest",
+    "init-db": "node src/init-db.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
