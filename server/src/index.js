@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import morgan from 'morgan';
 import winston from 'winston';
-import logger from './utils/logger.js';
+// import logger from './utils/logger.js';
 
 // Add this after your other middleware
 // Import routes
@@ -36,6 +36,13 @@ if (process.env.NODE_ENV !== 'production') {
     format: winston.format.simple()
   }));
 }
+
+// Create a stream object for Morgan
+logger.stream = {
+  write: (message) => logger.info(message.trim())
+};
+
+// Use Morgan middleware with the logger stream
 app.use(morgan('combined', { stream: logger.stream }));
 
 // Middleware

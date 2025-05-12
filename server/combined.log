@@ -21,3 +21,29 @@
 {"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-09T09:10:10.803Z"}
 {"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-09T09:10:27.232Z"}
 {"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-09T09:10:27.242Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-09T09:51:16.310Z"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-09T09:51:16.314Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-12T05:23:17.296Z"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-12T05:23:17.299Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-12T05:23:31.716Z"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-12T05:23:31.719Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-12T05:27:20.997Z"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-12T05:27:21.000Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-12T05:27:35.064Z"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-12T05:27:35.068Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-12T05:28:11.190Z"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-12T05:28:11.193Z"}
+{"level":"info","message":"::1 - - [12/May/2025:05:28:27 +0000] \"OPTIONS /api/auth/login HTTP/1.1\" 204 0 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36\"","timestamp":"2025-05-12T05:28:27.175Z"}
+{"level":"info","message":"::1 - - [12/May/2025:05:28:27 +0000] \"POST /api/auth/login HTTP/1.1\" 400 93 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36\"","timestamp":"2025-05-12T05:28:27.266Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-12T05:31:12.298Z"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-12T05:31:12.302Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-12T05:31:31.447Z"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-12T05:31:31.450Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-12T05:31:58.354Z"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-12T05:31:58.361Z"}
+{"level":"info","message":"::1 - - [12/May/2025:05:32:09 +0000] \"OPTIONS /api/auth/login HTTP/1.1\" 204 0 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36\"","timestamp":"2025-05-12T05:32:09.453Z"}
+{"level":"info","message":"::1 - - [12/May/2025:05:32:09 +0000] \"POST /api/auth/login HTTP/1.1\" 200 429 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36\"","timestamp":"2025-05-12T05:32:09.570Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-12T05:40:38.026Z"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-12T05:40:38.029Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-12T05:40:44.848Z"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-05-12T05:40:44.851Z"}
