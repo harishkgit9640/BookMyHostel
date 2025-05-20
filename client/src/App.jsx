@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import  getCurrentUser  from './store/slices/authSlice';
+import  {getCurrentUser}  from './store/slices/authSlice';
 
 // Layouts
 import AdminLayout from './layouts/AdminLayout';
@@ -45,7 +45,8 @@ const ProtectedRoute = ({ children, roles }) => {
 
 function App() {
   const dispatch = useDispatch();
-  const { isAuthenticated } = useSelector((state) => state.auth);
+  const { isAuthenticated, user } = useSelector((state) => state.auth);
+console.log("app page",user);
 
   useEffect(() => {
     if (isAuthenticated) {

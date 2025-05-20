@@ -10,11 +10,14 @@ const Login = () => {
   });
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { loading, error, isAuthenticated } = useSelector((state) => state.auth);
+  // const { loading, error, isAuthenticated, user } = useSelector((state) => state.auth);
+  const userAuth = useSelector((state) => state.auth);
+  const { loading, error, isAuthenticated, user } = userAuth;
+// console.log("login page",user);
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/dashboard');
+      navigate('/admin');
     }
     return () => {
       dispatch(clearError());

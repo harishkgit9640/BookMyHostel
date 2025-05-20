@@ -9,7 +9,7 @@ const auth = async (req, res, next) => {
       throw new Error();
     }
 
-    const decoded = jwt.verify(token, process.env.JWT_SECRECT_KEY);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const user = await User.findOne({ _id: decoded.userId, isActive: true });
 
     if (!user) {

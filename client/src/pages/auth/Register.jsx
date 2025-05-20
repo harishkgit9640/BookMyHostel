@@ -20,7 +20,7 @@ const Register = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/dashboard');
+      navigate('/admin');
     }
     return () => {
       dispatch(clearError());
